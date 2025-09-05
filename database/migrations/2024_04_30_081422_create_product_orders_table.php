@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('creator_id'); // yg pnya product
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->unsignedBigInteger('buyer_id'); // pembeli
+            $table->unsignedBigInteger('pembeli_id'); // pembeli
             $table->unsignedBigInteger('total_price'); // harga total
             $table->boolean('is_paid'); // dia udh bayar apa blm
             $table->string('proof'); // bukti pembayaran
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('creator_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('buyer_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('pembeli_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

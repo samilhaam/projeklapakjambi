@@ -10,12 +10,40 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::create([
-            'name' => 'Admin UMKM',
-            'email' => 'admin@umkm.test',
-            'password' => Hash::make('password'),
-            'avatar' => 'default.png',
-            'occupation' => 'Administrator'  // Tambahkan data occupation
-        ]);
+        // Admin user
+        User::updateOrCreate(
+            ['email' => 'admin@umkm.test'],
+            [
+                'name' => 'Admin UMKM',
+                'password' => Hash::make('password'),
+                'avatar' => 'default.png',
+                'occupation' => 'Administrator',
+                'role' => 'admin'
+            ]
+        );
+
+        // Pelaku UMKM user
+        User::updateOrCreate(
+            ['email' => 'umkm@test.com'],
+            [
+                'name' => 'Pelaku UMKM',
+                'password' => Hash::make('password'),
+                'avatar' => 'default.png',
+                'occupation' => 'Pelaku UMKM',
+                'role' => 'pelaku_umkm'
+            ]
+        );
+
+        // Pembeli user
+        User::updateOrCreate(
+            ['email' => 'pembeli@test.com'],
+            [
+                'name' => 'Pembeli',
+                'password' => Hash::make('password'),
+                'avatar' => 'default.png',
+                'occupation' => 'Pembeli',
+                'role' => 'pembeli'
+            ]
+        );
     }
 }

@@ -39,7 +39,7 @@
                             <p
                                 class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
                                 Sarah Lopez</p>
-                            <p class="font-semibold text-left text-xs text-belibang-grey">Brand Design Consultant
+                            <p class="font-semibold text-left text-xs text-lapakjmb-grey">Brand Design Consultant
                             </p>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                             <p
                                 class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
                                 Sarah Lopez</p>
-                            <p class="font-semibold text-left text-xs text-belibang-grey">Brand Design Consultant
+                            <p class="font-semibold text-left text-xs text-lapakjmb-grey">Brand Design Consultant
                             </p>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                             <p
                                 class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
                                 Michael Chen</p>
-                            <p class="font-semibold text-left text-xs text-belibang-grey">UI/UX Designer</p>
+                            <p class="font-semibold text-left text-xs text-lapakjmb-grey">UI/UX Designer</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                             <p
                                 class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
                                 Emily Robinson</p>
-                            <p class="font-semibold text-left text-xs text-belibang-grey">Senior Graphic Designer
+                            <p class="font-semibold text-left text-xs text-lapakjmb-grey">Senior Graphic Designer
                             </p>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                             <p
                                 class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
                                 Sarah Lopez</p>
-                            <p class="font-semibold text-left text-xs text-belibang-grey">Brand Design Consultant
+                            <p class="font-semibold text-left text-xs text-lapakjmb-grey">Brand Design Consultant
                             </p>
                         </div>
                     </div>

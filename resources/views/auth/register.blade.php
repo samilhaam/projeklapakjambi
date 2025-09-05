@@ -1,4 +1,4 @@
-<x-guest-layout>
+    <x-guest-layout>
     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
@@ -51,6 +51,20 @@
                 name="bank_account_number" :value="old('bank_account_number')" required />
             <x-input-error :messages="$errors->get('bank_account_number')" class="mt-2" />
         </div>
+
+        <!-- Pilihan Role -->
+        <div>
+            <label for="role" class="block text-sm font-medium text-gray-200">Daftar Sebagai</label>
+            <select name="role" id="role" class="mt-1 w-full rounded-lg bg-slate-700 text-white border border-slate-600 px-4 py-2" required>
+                <option value="">-- Pilih Role --</option>
+                <option value="pembeli">Pembeli</option>
+                <option value="pelaku_umkm">Pelaku UMKM</option>
+            </select>
+            @error('role')
+                <span class="text-red-400 text-sm">{{ $message }}</span>
+            @enderror
+        </div>
+
 
         <!-- Password -->
         <div class="mt-4">

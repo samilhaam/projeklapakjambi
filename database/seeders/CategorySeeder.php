@@ -16,36 +16,32 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Ebook',
-                'slug' => 'ebook',
-                'icon' => 'images/ic_ebook.svg',
+                'name' => 'Food',
+                'slug' => 'food',
+                'icon' => 'food-svgrepo-com.svg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
-
             [
-                'name' => 'Ebook',
-                'slug' => 'ebook',
-                'icon' => 'images/ic_course.svg',
+                'name' => 'Fashion',
+                'slug' => 'fashion',
+                'icon' => 'fashion-heart-like-svgrepo-com.svg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-
             ],
             [
-                'name' => 'Template',
-                'slug' => 'template',
-                'icon' => 'images/ic_template.svg',
+                'name' => 'Gadget',
+                'slug' => 'gadget',
+                'icon' => 'smartphone-svgrepo-com.svg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-
             ],
             [
-                'name' => 'Source Code',
-                'slug' => 'source-code',
-                'icon' => 'images/ic_font.svg',
+                'name' => 'Makeup',
+                'slug' => 'makeup',
+                'icon' => 'mascara-fashion-svgrepo-com.svg',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
-
             ],
         ]);
     }

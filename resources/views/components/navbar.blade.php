@@ -1,112 +1,67 @@
-<nav class="w-full fixed top-0 bg-[#00000010] backdrop-blur-lg z-10">
-    <div class="container max-w-[1130px] mx-auto flex items-center justify-between h-[74px]">
-        <div class="flex items-center gap-[26px]">
-            <a href="{{ route('front.index') }}" class="flex w-[154px] shrink-0 items-center">
-                {{-- <img src="{{ asset('images/logos/logo.svg') }}" alt="logo"> --}}
-                {{-- <h1 style="font-size: 30px;" class="text-lg font-bold">UMKM FOODIE JAMBI</h1> --}}
-                <h1 class="font-bold text-3xl ">Lapakjmb.id</h1>
+<nav class="w-full fixed top-0 bg-[#0f0f0f66] backdrop-blur-md z-50 shadow-md transition-all duration-300">
+    <div class="container max-w-[1130px] mx-auto flex items-center justify-between h-[74px] px-4">
+        <!-- Logo & Menu -->
+        <div class="flex items-center gap-8">
+            <a href="{{ route('front.index') }}" class="flex items-center text-white font-bold text-2xl">
+                <span class="text-white">Lapakjmb<span class="text-purple-400">    
+                    .id</span></span>
             </a>
-            <ul class="flex gap-6 items-center pl-6">
-                <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                    <a href="{{ route('front.index') }}">Home</a>
+
+            <!-- Menu -->
+            <ul class="hidden md:flex gap-6 items-center text-sm">
+                <li>
+                    <a href="{{ route('front.index') }}"
+                        class="text-gray-300 hover:text-white transition duration-300">Home</a>
                 </li>
-                <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300 relative">
-                    <button id="menu-button" class="flex items-center gap-1 focus:text-belibang-light-grey">
-                        <span>Categories</span>
-                        <img src="{{ asset('images/icons/arrow-down.svg') }}" alt="icon">
-                    </button>
-                    <div
-                        class="dropdown-menu hidden absolute top-[52px] grid-cols-2 p-4 gap-[10px] w-[526px] rounded-[20px] bg-[#1E1E1E] border border-[#414141] z-10">
-                        <div
-                            class="col-span-2 flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
-                            <div class="flex items-center">
-                                <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                    <img src="{{ asset('images/icons/cart.svg') }}" alt="icon">
-                                </a>
-                                <a href="" class="flex flex-col">
-                                    <p class="font-bold text-sm text-white">All Products</p>
-                                    <p class="text-xs text-belibang-grey">Everything in One Place</p>
-                                </a>
-                            </div>
-                            <div class="w-6 h-6 flex shrink-0">
-                                <img src="{{ asset('images/icons/crown.svg') }}" alt="icon">
-                            </div>
-                        </div>
-                        <div
-                            class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
-                            <div class="flex items-center">
-                                <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                    <img src="{{ asset('images/ic_template.svg') }}" alt="icon">
-                                </a>
-                                <a href="" class="flex flex-col">
-                                    <p class="font-bold text-sm text-white">Template</p>
-                                    <p class="text-xs text-belibang-grey">Designs Made Easy</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div
-                            class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
-                            <div class="flex items-center">
-                                <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                    <img src="{{ asset('images/ic_course.svg') }}" alt="icon">
-                                </a>
-                                <a href="" class="flex flex-col">
-                                    <p class="font-bold text-sm text-white">Artikel</p>
-                                    <p class="text-xs text-belibang-grey">Expand Your Skills</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div
-                            class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
-                            <div class="flex items-center">
-                                <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                    <img src="{{ asset('images/ic_font.svg') }}" alt="icon">
-                                </a>
-                                <a href="" class="flex flex-col">
-                                    <p class="font-bold text-sm text-white">Ebooks</p>
-                                    <p class="text-xs text-belibang-grey">Read and Learn</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div
-                            class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
-                            <div class="flex items-center">
-                                <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                    <img src="{{ asset('images/ic_ebook.svg') }}" alt="icon">
-                                </a>
-                                <a href="" class="flex flex-col">
-                                    <p class="font-bold text-sm text-white">Source Code</p>
-                                    <p class="text-xs text-belibang-grey">Typography Selection</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                    <a href="">Stories</a>
-                </li>
-                <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                    <a href="">Benefits</a>
-                </li>
-                <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                    <a href="">About</a>
+                <li>
+                    <a href="{{ route('front.about') }}"
+                        class="text-gray-300 hover:text-white transition duration-300">About</a>
                 </li>
             </ul>
         </div>
-        <div class="flex gap-6 items-center">
+
+        <!-- Auth -->
+        <div class="flex gap-4 items-center text-sm">
             @guest
                 <a href="{{ route('login') }}"
-                    class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">Log
-                    in</a>
+                    class="text-gray-300 hover:text-white transition duration-300">Log in</a>
                 <a href="{{ route('register') }}"
-                    class="p-[8px_16px] w-fit h-fit rounded-[12px] text-belibang-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">Sign
+                    class="px-4 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300">Sign
                     up</a>
             @endguest
 
             @auth
-                <a href="{{ route('admin.dashboard') }}"
-                    class="p-[8px_16px] w-fit h-fit rounded-[12px] text-belibang-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">My
-                    Dashboard</a>
+                @php
+                    $user = Auth::user();
+                    $dashboardRoute = '';
+                    $dashboardText = '';
+                    
+                    if ($user->role === 'admin') {
+                        $dashboardRoute = 'admin.dashboard';
+                        $dashboardText = 'Admin Dashboard';
+                    } elseif ($user->role === 'pelaku_umkm') {
+                        $dashboardRoute = 'pelaku_umkm.dashboard';
+                        $dashboardText = 'UMKM Dashboard';
+                    } elseif ($user->role === 'pembeli') {
+                        $dashboardRoute = 'pembeli.dashboard';
+                        $dashboardText = 'pembeli';
+                    }
+                @endphp
+                
+                @if($dashboardRoute)
+                    <a href="{{ route($dashboardRoute) }}"
+                        class="px-4 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-700 hover:text-white transition-all duration-300">
+                        {{ $dashboardText }}
+                    </a>
+                @endif
+                
+                <form action="{{ route('logout') }}" method="POST" class="inline">
+                    @csrf
+                    <button type="submit"
+                        class="px-4 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-red-700 hover:text-white transition-all duration-300">
+                        Sign Out
+                    </button>
+                </form>
             @endauth
         </div>
     </div>

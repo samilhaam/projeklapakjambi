@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            CategorySeeder::class,
-        ]);
+        CategorySeeder::class,
+        StorySeeder::class, // ✅ tambahkan ini
+    ]);
     }
 }

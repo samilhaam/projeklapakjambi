@@ -19,13 +19,22 @@ class ProductController extends Controller
      */
     public function index()
     {
-        // dd('Hallo');
-        // dd($products);
-
+        try {
         $products = Product::where('creator_id', Auth::id())->get(); // cari data berdasarkan creator id
-        return view('admin.products.index', [
-            'products' => $products,
-        ]);
+        
+            // Cek apakah request dari admin atau pelaku_umkm
+        if (request()->route()->getPrefix() === 'admin') {
+            return view('admin.products.index', [
+                'products' => $products,
+            ]);
+        } else {
+                return view('pelaku_umkm.products.index', [
+                'products' => $products,
+            ]);
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error loading products: ' . $e->getMessage());
+        }
     }
 
     /**
@@ -34,9 +43,17 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.products.create', [
-            'catagories' => $categories,
-        ]);
+        
+        // Cek apakah request dari admin atau pelaku_umkm
+        if (request()->route()->getPrefix() === 'admin') {
+            return view('admin.products.create', [
+                'categories' => $categories,
+            ]);
+        } else {
+            return view('pelaku_umkm.products.create', [
+                'categories' => $categories,
+            ]);
+        }
     }
 
     /**
@@ -57,6 +74,11 @@ class ProductController extends Controller
         DB::beginTransaction();
 
         try {
+            // Create product first
+            $validated['slug'] = Str::slug($request->name);
+            $validated['creator_id'] = Auth::id();
+            
+            // Keep the old cover field for backward compatibility
             if ($request->hasFile('cover')) {
                 $coverPath = $request->file('cover')->store('product_covers', 'public');
                 $validated['cover'] = $coverPath;
@@ -66,12 +88,27 @@ class ProductController extends Controller
                 $path_FilePath = $request->file('path_file')->store('product_files', 'public');
                 $validated['path_file'] = $path_FilePath;
             }
-            $validated['slug'] = Str::slug($request->name);
-            $validated['creator_id'] = Auth::id(); // berlaku untk yg sdh login
+
             $newProduct = Product::create($validated);
+
+            // Store image in new product_images table
+            if ($request->hasFile('cover')) {
+                \App\Helpers\ImageHelper::storeProductImage(
+                    $request->file('cover'), 
+                    $newProduct->id, 
+                    'cover', 
+                    true // Set as primary image
+                );
+            }
+
             DB::commit();
 
-            return redirect()->route('admin.products.index')->with('success', 'Product Created SuccessFuly');
+            // Cek apakah request dari admin atau pelaku_umkm
+            if (request()->route()->getPrefix() === 'admin') {
+                return redirect()->route('admin.products.index')->with('success', 'Product Created SuccessFuly');
+            } else {
+                return redirect()->route('pelaku_umkm.products.index')->with('success', 'Product Created SuccessFuly');
+            }
         } catch (\Exception $e) {
             DB::rollBack();
             $error = ValidationException::withMessages([
@@ -94,11 +131,24 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        try {
         $categories = Category::all();
+            
+            // Cek apakah request dari admin atau pelaku_umkm
+            if (request()->route()->getPrefix() === 'admin') {
         return view('admin.products.edit', [
             'product' => $product,
-            'catagories' => $categories,
+                    'categories' => $categories,
+                ]);
+            } else {
+                return view('pelaku_umkm.products.edit', [
+                    'product' => $product,
+                    'categories' => $categories,
         ]);
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error loading product: ' . $e->getMessage());
+        }
     }
 
     /**
@@ -115,6 +165,7 @@ class ProductController extends Controller
             'category_id' => ['required', 'integer', 'max:65535'],
             'price' => ['required', 'integer', 'min:0'],
         ]);
+        
         DB::beginTransaction();
         try {
             if ($request->hasFile('cover')) {
@@ -123,7 +174,16 @@ class ProductController extends Controller
                     Storage::disk('public')->delete($product->cover);
                 }
                 $validated['cover'] = $coverPath;
+                
+                // Also store in new product_images table
+                \App\Helpers\ImageHelper::storeProductImage(
+                    $request->file('cover'), 
+                    $product->id, 
+                    'cover', 
+                    true // Set as primary image
+                );
             }
+            
             if ($request->hasFile('path_file')) {
                 $path_FilePath = $request->file('path_file')->store('product_files', 'public');
                 if ($product->path_file) {
@@ -131,11 +191,19 @@ class ProductController extends Controller
                 }
                 $validated['path_file'] = $path_FilePath;
             }
+            
             $validated['slug'] = Str::slug($request->name);
-            $validated['creator_id'] = Auth::id(); // berlaku untk yg sdh login
+            $validated['creator_id'] = Auth::id();
             $product->update($validated);
+            
             DB::commit();
+            
+            // Cek apakah request dari admin atau pelaku_umkm
+            if (request()->route()->getPrefix() === 'admin') {
             return redirect()->route('admin.products.index')->with('success', 'Product Updated SuccessFuly');
+            } else {
+                return redirect()->route('pelaku_umkm.products.index')->with('success', 'Product Updated SuccessFuly');
+            }
         } catch (\Exception $e) {
             DB::rollBack();
             $error = ValidationException::withMessages([
@@ -153,7 +221,13 @@ class ProductController extends Controller
         // dd($product);
         try {
             $product->delete();
+            
+            // Cek apakah request dari admin atau pelaku_umkm
+            if (request()->route()->getPrefix() === 'admin') {
             return redirect()->route('admin.products.index')->with('success', 'Deleted Product Successfully');
+            } else {
+                return redirect()->route('pelaku_umkm.products.index')->with('success', 'Deleted Product Successfully');
+            }
         } catch (\Exception $e) {
             $error = ValidationException::withMessages([
                 'system_error' => ['System_Error' . $e->getMessage()],

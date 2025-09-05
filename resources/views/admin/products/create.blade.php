@@ -1,88 +1,101 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.admin')
 
-    <div class="py-12">
-        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm p-10 sm:rounded-lg">
-                <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
-                    @csrf
-
-                    <h1 class="text-indigo-950 font-bold text-3xl">Add New Product</h1>
-
-                    {{-- @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li class="py-5 bg-red-500 text-white font-bold">{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif --}}
-
-                    <div class="mt-4">
-                        <x-input-label for="cover" :value="__('Cover')" />
-                        <x-text-input id="cover" class="block mt-1 w-full" type="file" name="cover" required />
-                        <x-input-error :messages="$errors->get('cover')" class="mt-2" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-input-label for="path_file" :value="__('path_file')" />
-                        <x-text-input id="path_file" class="block mt-1 w-full" type="file" name="path_file"
-                            required />
-                        <x-input-error :messages="$errors->get('path_file')" class="mt-2" />
-                    </div>
-
-                    <!-- Name -->
-                    <div class="mt-4">
-                        <x-input-label for="name" :value="__('Name')" />
-                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
-                            :value="old('name')" required autofocus autocomplete="name" />
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-input-label for="price" :value="__('price')" />
-                        <x-text-input id="price" class="block mt-1 w-full" type="number" name="price"
-                            :value="old('price')" required autofocus autocomplete="price" />
-                        <x-input-error :messages="$errors->get('price')" class="mt-2" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-input-label for="category" :value="__('category')" />
-                        <select name="category_id" id="" class="w-full py-2 pl-5 border rounded">
-                            <option value="">Select category</option>
-                            @forelse ($catagories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                            @empty
-                                <p>Data kategory tidak ada</p>
-                                <p>Jika kategori kosong kembali ke langkah awal</p>
-                            @endforelse
-                        </select>
-                        <x-input-error :messages="$errors->get('category_id')" class="mt-2" />
-                    </div>
-
-                    <div class="mt-4">
-                        <x-input-label for="about" :value="__('about')" />
-                        <textarea name="about" id="about" class="w-full py-2 pl-5 border rounded"></textarea>
-                        <x-input-error :messages="$errors->get('about')" class="mt-2" />
-                    </div>
-
-                    <div class="flex items-center justify-end mt-4">
-                        {{-- <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                            href="{{ route('login') }}">
-                            {{ __('Already registered?') }}
-                        </a> --}}
-
-                        <x-primary-button class="ms-4">
-                            {{ __('Add Product') }}
-                        </x-primary-button>
-                    </div>
-                </form>
+@section('content')
+<div class="min-h-screen bg-gray-900">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-white">Create New Product</h1>
+                <a href="{{ route('admin.products.index') }}" class="text-blue-400 hover:text-blue-300">← Back to Products</a>
             </div>
         </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-8">
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
+                @csrf
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Product Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Product Name</label>
+                        <input type="text" name="name" id="name" value="{{ old('name') }}" 
+                               class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        @error('name')
+                            <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Category -->
+                    <div>
+                        <label for="category_id" class="block text-sm font-medium text-gray-300 mb-2">Category</label>
+                        <select name="category_id" id="category_id" 
+                                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Select Category</option>
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                    {{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('category_id')
+                            <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Price -->
+                    <div>
+                        <label for="price" class="block text-sm font-medium text-gray-300 mb-2">Price</label>
+                        <input type="number" name="price" id="price" value="{{ old('price') }}" step="0.01" min="0"
+                               class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        @error('price')
+                            <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Cover Image -->
+                    <div>
+                        <label for="cover" class="block text-sm font-medium text-gray-300 mb-2">Cover Image</label>
+                        <input type="file" name="cover" id="cover" accept="image/*"
+                               class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        @error('cover')
+                            <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Active Status -->
+                    <div class="md:col-span-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="is_active" value="1" {{ old('is_active') ? 'checked' : '' }}
+                                   class="rounded border-gray-600 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                            <span class="ml-2 text-sm text-gray-300">Active Product</span>
+                        </label>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="md:col-span-2">
+                        <label for="description" class="block text-sm font-medium text-gray-300 mb-2">Description</label>
+                        <textarea name="description" id="description" rows="6" 
+                                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">{{ old('description') }}</textarea>
+                        @error('description')
+                            <p class="text-red-400 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mt-6 flex justify-end">
+                    <button type="submit" 
+                            class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Create Product
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-</x-app-layout>
+</div>
+@endsection
+    

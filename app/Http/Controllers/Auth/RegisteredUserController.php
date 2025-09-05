@@ -39,6 +39,7 @@ class RegisteredUserController extends Controller
             'bank_account_number' => ['required', 'numeric', 'min:0'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'role' => 'required|in:pembeli,pelaku_umkm',
         ]);
         if ($request->hasFile('avatar')) {
             $avatarPath = $request->file('avatar')->store('avatars', 'public');
@@ -54,10 +55,20 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
         event(new Registered($user));
         Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
+        switch ($user->role) {
+            case 'admin' :
+                return redirect()->route('admin.dashboard');
+            case 'pelaku_umkm':
+                return redirect()->route('pelaku_umkm.dashboard');
+            case 'pembeli':
+            default:
+                return redirect()->route('pembeli.dashboard');        
+        }
     }
+
 }
+

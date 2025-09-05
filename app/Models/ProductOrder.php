@@ -12,13 +12,26 @@ class ProductOrder extends Model
 
     protected $guarded = ['id'];
 
+    /**
+     * Get the route key for the model.
+     */
+    public function getRouteKeyName()
+    {
+        return 'id';
+    }
+
     public function Product()
     {
         return $this->belongsTo(Product::class, 'product_id');
     }
 
-    public function Buyer()
+    public function pembeli()
     {
-        return $this->belongsTo(User::class, 'buyer_id');
+        return $this->belongsTo(User::class, 'pembeli_id');
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'creator_id');
     }
 }

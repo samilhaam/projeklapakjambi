@@ -26,6 +26,7 @@ class User extends Authenticatable
         'avatar',
         'bank_name',
         'bank_account_number',
+        'role',
     ];
 
     /**
@@ -47,4 +48,39 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function isPelakuUmkm(){
+        return $this->role === 'pelaku_umkm';
+    }
+
+    public function isPembeli(){
+        return $this->role === 'pembeli';
+    }
+
+    public function isAdmin(){
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Get all products created by this user
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'creator_id');
+    }
+
+    /**
+     * Get all orders made by this user (as pembeli)
+     */
+    public function orders()
+    {
+        return $this->hasMany(ProductOrder::class, 'pembeli_id');
+    }
+
+    /**
+     * Get all orders created by this user (as creator/seller)
+     */
+    public function createdOrders()
+    {
+        return $this->hasMany(ProductOrder::class, 'creator_id');
+    }
 }

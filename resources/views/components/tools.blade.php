@@ -16,7 +16,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Blender</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">3D Ul Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">3D Ul Design</p>
                         </div>
                     </div>
                 </a>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Excel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Data Analysis</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Data Analysis</p>
                         </div>
                     </div>
                 </a>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Kotlin</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Android Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Android Development
                             </p>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Laravel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Vue</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Front-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Front-End Development
                             </p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Figma</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Ul/UX Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Ul/UX Design</p>
                         </div>
                     </div>
                 </a>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Flutter</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Mobile Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Mobile Development
                             </p>
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Golang</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Blender</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">3D Ul Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">3D Ul Design</p>
                         </div>
                     </div>
                 </a>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Excel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Data Analysis</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Data Analysis</p>
                         </div>
                     </div>
                 </a>
@@ -164,7 +164,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Kotlin</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Android Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Android Development
                             </p>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Laravel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Vue</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Front-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Front-End Development
                             </p>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Figma</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Ul/UX Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Ul/UX Design</p>
                         </div>
                     </div>
                 </a>
@@ -223,7 +223,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Flutter</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Mobile Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Mobile Development
                             </p>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Golang</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Blender</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">3D Ul Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">3D Ul Design</p>
                         </div>
                     </div>
                 </a>
@@ -272,7 +272,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Excel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Data Analysis</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Data Analysis</p>
                         </div>
                     </div>
                 </a>
@@ -286,7 +286,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Kotlin</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Android Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Android Development
                             </p>
                         </div>
                     </div>
@@ -301,7 +301,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Laravel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -316,7 +316,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Vue</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Front-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Front-End Development
                             </p>
                         </div>
                     </div>
@@ -331,7 +331,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Figma</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Ul/UX Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Ul/UX Design</p>
                         </div>
                     </div>
                 </a>
@@ -345,7 +345,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Flutter</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Mobile Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Mobile Development
                             </p>
                         </div>
                     </div>
@@ -360,7 +360,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Golang</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -378,7 +378,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Blender</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">3D Ul Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">3D Ul Design</p>
                         </div>
                     </div>
                 </a>
@@ -392,7 +392,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Excel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Data Analysis</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Data Analysis</p>
                         </div>
                     </div>
                 </a>
@@ -406,7 +406,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Kotlin</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Android Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Android Development
                             </p>
                         </div>
                     </div>
@@ -421,7 +421,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Laravel</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Vue</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Front-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Front-End Development
                             </p>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Figma</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Ul/UX Design</p>
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Ul/UX Design</p>
                         </div>
                     </div>
                 </a>
@@ -465,7 +465,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Flutter</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Mobile Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Mobile Development
                             </p>
                         </div>
                     </div>
@@ -480,7 +480,7 @@
                         </div>
                         <div class="flex flex-col justify-center gap-1">
                             <p class="font-bold text-lg">Golang</p>
-                            <p class="font-semibold text-xs leading-[170%] text-belibang-grey">Back-End Development
+                            <p class="font-semibold text-xs leading-[170%] text-lapakjmb-grey">Back-End Development
                             </p>
                         </div>
                     </div>

@@ -1,0 +1,33 @@
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="80" rx="12" fill="url(#bgGradient)"/>
+  
+  <!-- Border -->
+  <rect x="2" y="2" width="296" height="76" rx="10" stroke="#475569" stroke-width="2" fill="none"/>
+  
+  <!-- Lapakjambi text -->
+  <text x="20" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#textGradient)">Lapakjambi</text>
+  
+  <!-- .id extension with gradient -->
+  <text x="180" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#accentGradient)">.id</text>
+  
+  <!-- Subtle shadow for depth -->
+  <text x="21" y="51" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1e293b" opacity="0.3">Lapakjambi</text>
+  <text x="181" y="51" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1e293b" opacity="0.3">.id</text>
+</svg>

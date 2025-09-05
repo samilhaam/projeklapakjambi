@@ -40,7 +40,7 @@ class CheckoutController extends Controller
         $data = [
             'total_price' => $product->price,
             'is_paid' => false,
-            'buyer_id' => Auth::id(),
+            'pembeli_id' => Auth::id(),
             'creator_id' => $product->creator_id,
             'product_id' => $product->id,
             'proof' => $validated['proof'],
@@ -50,7 +50,16 @@ class CheckoutController extends Controller
         try {
             $newOrder = ProductOrder::firstOrCreate($data);
             DB::commit();
-            return redirect()->route('admin.product_orders.transaction')->with('success', 'Transaction Created SuccessFuly');
+            
+            // Redirect berdasarkan role user
+            $user = Auth::user();
+            if ($user->role === 'admin') {
+                return redirect()->route('admin.product_orders.transaction')->with('success', 'Transaction Created SuccessFuly');
+            } elseif ($user->role === 'pelaku_umkm') {
+                return redirect()->route('pelaku_umkm.transactions')->with('success', 'Transaction Created SuccessFuly');
+            } else {
+                return redirect()->route('pembeli.purchases')->with('success', 'Transaction Created SuccessFuly');
+            }
         } catch (\Exception $e) {
             DB::rollBack();
             $error = ValidationException::withMessages([

@@ -23,7 +23,7 @@
                     <hr>
 
                     <div class="text-sm text-slate-500">
-                        <p>Buyer : {{ $order->Buyer->name }}</p> {{-- 2 relasi bergabung --}}
+                        <p>pembeli : {{ $order->pembeli->name }}</p> {{-- 2 relasi bergabung --}}
                     </div>
                     <hr>
 

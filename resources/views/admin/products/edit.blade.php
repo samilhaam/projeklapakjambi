@@ -25,7 +25,7 @@
 
                     <div class="mt-4">
                         <x-input-label for="cover" :value="__('Cover')" />
-                        <img src="{{ Storage::url($product->cover) }}" class="h-[100px] w-auto" alt="">
+                        <img src="{{ \App\Helpers\ImageHelper::getProductCoverUrl($product) }}" class="h-[100px] w-auto" alt="">
                         <x-text-input id="cover" class="block mt-1 w-full" type="file" name="cover" />
                         <x-input-error :messages="$errors->get('cover')" class="mt-2" />
                     </div>

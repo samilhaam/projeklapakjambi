@@ -16,21 +16,24 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
-        @include('layouts.navigation')
+<body class="font-sans antialiased bg-gray-900 text-white">
+    <div class="min-h-screen bg-gray-900">
+        {{-- Navbar: disembunyikan untuk pelaku_umkm --}}
+        @if(!(auth()->check() && auth()->user()->role === 'pelaku_umkm'))
+            @include('layouts.navigation')
+        @endif
 
-        <!-- Page Heading -->
+        {{-- Page Heading --}}
         @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <header class="bg-gray-800 shadow-md border-b border-gray-700">
+                <div class="w-full px-4 md:px-10 py-4">
                     {{ $header }}
                 </div>
             </header>
         @endif
 
-        <!-- Page Content -->
-        <main>
+        {{-- Page Content --}}
+        <main class="py-6 px-4 md:px-10">
             {{ $slot }}
         </main>
     </div>

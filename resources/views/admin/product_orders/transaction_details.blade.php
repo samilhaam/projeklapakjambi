@@ -1,9 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-100 leading-tight">
             {{ __('My Products') }}
         </h2>
     </x-slot>
+
+    <!-- 🔙 Tombol Back ke Halaman Transaksi -->
+    <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 mt-6">
+        <a href="{{ route('admin.product_orders.transaction') }}"
+           class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white font-medium text-sm rounded-md shadow hover:bg-indigo-500 transition-all duration-300">
+            ← Back to Transactions
+        </a>
+    </div>
 
     <div class="py-12">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
@@ -19,8 +27,8 @@
                         <h3 class="text-lg text-indigo-950 font-bold">{{ $order->Product->name }}</h3>
                     </div>
                     <div class="text-sm text-slate-500">
-                        <p>{{ $order->Product->Category->name }}</p> {{-- 2 relasi bergabung --}}
-                        <p>Owner : {{ $order->Product->Creator->name }}</p> {{-- 2 relasi bergabung --}}
+                        <p>{{ $order->Product->Category->name }}</p>
+                        <p>Owner : {{ $order->Product->Creator ? $order->Product->Creator->name : 'Unknown' }}</p>
                     </div>
 
                     <div class="flex gap-3 flex-row items-center">

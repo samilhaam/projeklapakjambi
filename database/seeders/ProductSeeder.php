@@ -12,10 +12,10 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Sepatu Lokal Jambi',
             'slug' => 'sepatu-lokal-jambi',
-            'cover' => 'cover.jpg',
+            'cover' => 'product_covers/cover.jpg',
             'price' => 150000,
             'about' => 'Produk sepatu asli UMKM Jambi',
-            'path_file' => 'produk/cover.jpg',
+            'path_file' => 'product_files/sepatu-lokal-jambi.zip',
             'category_id' => 1,
             'creator_id' => 1
         ]);

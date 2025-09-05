@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Providers\RouteServiceProvider;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,8 +29,19 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $user = Auth::user(); 
+
+        if ($user->role === 'admin') {
+        return redirect()->intended('/admin/dashboard');
+    } elseif ($user->role === 'pelaku_umkm') {
+        return redirect()->intended('/pelaku-umkm/dashboard');
+    } elseif ($user->role === 'pembeli') {
+        return redirect()->intended('/pembeli/dashboard');
+    } else {
+        Auth::logout();
+        return redirect('/login')->withErrors(['role' => 'Role tidak valid.']);
     }
+}
 
     /**
      * Destroy an authenticated session.

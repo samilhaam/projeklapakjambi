@@ -3,19 +3,17 @@
 @section('content')
 
     {{-- karena di dlm compponent maka manggilnya sprti ini --}}
-
-
     <nav class="w-full bg-[#00000010] backdrop-blur-lg z-10">
         <div class="container max-w-[1130px] mx-auto flex items-center justify-between h-[74px]">
             <div class="flex items-center gap-[26px]">
                 <a href="index.html" class="flex w-[154px] shrink-0 items-center">
-                    <img src="{{ asset('images/logos/logo.svg') }}" alt="logo">
+                    <img src="{{ asset('images/logos/logolapakjambi.svg') }}" alt="logo">
                 </a>
                 <ul class="flex gap-6 items-center">
-                    <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
+                    <li class="text-lapakjmb-grey hover:text-belibang-light-grey transition-all duration-300">
                         <a href="{{ route('front.index') }}">Home</a>
                     </li>
-                    <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300 relative">
+                    <li class="text-lapakjmb-grey hover:text-belibang-light-grey transition-all duration-300 relative">
                         <button id="menu-button" class="flex items-center gap-1 focus:text-belibang-light-grey">
                             <span>Categories</span>
                             <img src="{{ asset('images/icons/arrow-down.svg') }}" alt="icon">
@@ -30,7 +28,7 @@
                                     </a>
                                     <a href="" class="flex flex-col">
                                         <p class="font-bold text-sm text-white">All Products</p>
-                                        <p class="text-xs text-belibang-grey">Everything in One Place</p>
+                                        <p class="text-xs text-lapakjmb-grey">Everything in One Place</p>
                                     </a>
                                 </div>
                                 <div class="w-6 h-6 flex shrink-0">
@@ -41,11 +39,11 @@
                                 class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
                                 <div class="flex items-center">
                                     <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                        <img src="{{ asset('images/icons/laptop.svg') }}" alt="icon">
+                                        <img src="{{ asset('images/icons/food.svg') }}" alt="icon">
                                     </a>
                                     <a href="" class="flex flex-col">
-                                        <p class="font-bold text-sm text-white">Templates</p>
-                                        <p class="text-xs text-belibang-grey">Designs Made Easy</p>
+                                        <p class="font-bold text-sm text-white">Food</p>
+                                        <p class="text-xs text-lapakjmb-grey">Designs Made Easy</p>
                                     </a>
                                 </div>
                             </div>
@@ -53,11 +51,11 @@
                                 class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
                                 <div class="flex items-center">
                                     <a href="" class="w-[58px] h-[58px] shrink-0 flex items-center">
-                                        <img src="{{ asset('images/icons/hat.svg') }}" alt="icon">
+                                        <img src="{{ asset('images/icons/hp.svg') }}" alt="icon">
                                     </a>
                                     <a href="" class="flex flex-col">
-                                        <p class="font-bold text-sm text-white">Courses</p>
-                                        <p class="text-xs text-belibang-grey">Expand Your Skills</p>
+                                        <p class="font-bold text-sm text-white">Gadget</p>
+                                        <p class="text-xs text-lapakjmb-grey">Expand Your Skills</p>
                                     </a>
                                 </div>
                             </div>
@@ -65,11 +63,11 @@
                                 class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
                                 <div class="flex items-center">
                                     <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                        <img src="{{ asset('images/icons/book.svg') }}" alt="icon">
+                                        <img src="{{ asset('images/icons/fashion.svg') }}" alt="icon">
                                     </a>
                                     <a href="" class="flex flex-col">
-                                        <p class="font-bold text-sm text-white">Ebooks</p>
-                                        <p class="text-xs text-belibang-grey">Read and Learn</p>
+                                        <p class="font-bold text-sm text-white">Fashion</p>
+                                        <p class="text-xs text-lapakjmb-grey">Read and Learn</p>
                                     </a>
                                 </div>
                             </div>
@@ -77,23 +75,17 @@
                                 class="flex justify-between items-center rounded-2xl p-[12px_16px] border border-[#414141] hover:bg-[#2A2A2A] transition-all duration-300">
                                 <div class="flex items-center">
                                     <a href="" class="w-[58px] h-[58px] flex shrink-0 items-center">
-                                        <img src="{{ asset('images/icons/pen.svg') }}" alt="icon">
+                                        <img src="{{ asset('images/icons/mascara.svg') }}" alt="icon">
                                     </a>
                                     <a href="" class="flex flex-col">
-                                        <p class="font-bold text-sm text-white">Fonts</p>
-                                        <p class="text-xs text-belibang-grey">Typography Selection</p>
+                                        <p class="font-bold text-sm text-white">Makeup</p>
+                                        <p class="text-xs text-lapakjmb-grey">Typography Selection</p>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                        <a href="">Stories</a>
-                    </li>
-                    <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
-                        <a href="">Benefits</a>
-                    </li>
-                    <li class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">
+                    <li class="text-lapakjmb-grey hover:text-belibang-light-grey transition-all duration-300">
                         <a href="">About</a>
                     </li>
                 </ul>
@@ -101,16 +93,16 @@
             <div class="flex gap-6 items-center">
                 @guest
                     <a href="{{ route('login') }}"
-                        class="text-belibang-grey hover:text-belibang-light-grey transition-all duration-300">Log
+                        class="text-lapakjmb-grey hover:text-belibang-light-grey transition-all duration-300">Log
                         in</a>
                     <a href="{{ route('register') }}"
-                        class="p-[8px_16px] w-fit h-fit rounded-[12px] text-belibang-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">Sign
+                        class="p-[8px_16px] w-fit h-fit rounded-[12px] text-lapakjmb-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">Sign
                         up</a>
                 @endguest
 
                 @auth
                     <a href="{{ route('admin.dashboard') }}"
-                        class="p-[8px_16px] w-fit h-fit rounded-[12px] text-belibang-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">My
+                        class="p-[8px_16px] w-fit h-fit rounded-[12px] text-lapakjmb-grey border border-belibang-dark-grey hover:bg-[#2A2A2A] hover:text-white transition-all duration-300">My
                         Dashboard</a>
                 @endauth
             </div>
@@ -134,23 +126,23 @@
                 <h1 class="font-semibold text-[32px] ">Checkout Product</h1>
                 <div class="product-detail flex flex-col gap-3">
                     <div class="thumbnail w-[412px] h-[255px] flex shrink-0 rounded-[20px] overflow-hidden">
-                        <img src="{{ Storage::url($product->cover) }}" class="w-full h-full object-cover" alt="thumbnail">
+                        <img src="{{ \App\Helpers\ImageHelper::getProductCoverUrl($product) }}" class="w-full h-full object-cover" alt="thumbnail">
                     </div>
                     <div class="product-title flex flex-col gap-[30px]">
                         <div class="flex flex-col gap-3">
                             <p class="font-semibold">{{ $product->name }}
                             </p>
                             <p
-                                class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">
+                                class="bg-[#2A2A2A] font-semibold text-xs text-lapakjmb-grey rounded-[4px] p-[4px_6px] w-fit">
                                 {{ $product->Category->name }}</p>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="flex items-center gap-2">
                                 <div class="w-8 h-8 rounded-full flex shrink-0 overflow-hidden">
-                                    <img src="{{ Storage::url($product->Creator->avatar) }}" alt="logo">
+                                    <img src="{{ \App\Helpers\ImageHelper::getUserAvatarUrl($product->Creator) }}" alt="logo">
                                 </div>
-                                <p class="font-semibold text-belibang-grey">
-                                    {{ Str::limit(strip_tags($product->Creator->name), 12, '...') }}</p>
+                                <p class="font-semibold text-lapakjmb-grey">
+                                    {{ Str::limit(strip_tags($product->Creator ? $product->Creator->name : 'Unknown'), 12, '...') }}</p>
                             </div>
                             <p
                                 class="font-semibold text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
@@ -166,19 +158,20 @@
                 class="flex flex-col p-[30px] gap-[60px] rounded-[20px] w-[450px] border-2 border-belibang-darker-grey">
                 @csrf
                 <div class="w-full flex flex-col gap-4">
-                    <p class="font-semibold text-xl">Transfer to:</p>
+                    <p class="font-semibold text-xl">Transfer ke</p>
                     <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between bg-[#181818] rounded-lg p-3">
+                            <span class="text-sm text-lapakjmb-grey">Nominal yang harus ditransfer</span>
+                            <span class="font-semibold text-lg">Rp. {{ number_format($product->price, 0, ',', '.') }}</span>
+                        </div>
                         <div class="flex gap-3">
                             <div
                                 class="flex items-center gap-1 p-[12px_20px] pl-4 w-[163px] justify-between rounded-lg bg-[#181818] hover:ring-[1px] hover:ring-[#A0A0A0] focus:ring-[1px] focus:ring-[#A0A0A0] transition-all duration-300">
                                 <div class="flex flex-col">
-                                    <label for="bank" class="text-xs text-belibang-grey pl-1">Bank Name</label>
-                                    <select name="bank" id="bank"
-                                        class="mt-1 font-semibold bg-transparent appearance-none outline-none px-1 invalid:text-[#595959] invalid:font-normal invalid:text-sm"
-                                        required>
-                                        <option class="text-belibang-black" selected>
-                                            {{ $product->Creator->bank_name }}</option>
-                                    </select>
+                                    <label for="bank" class="text-xs text-lapakjmb-grey pl-1">Nama Bank</label>
+                                    <input type="text" name="bank" id="bank"
+                                        class="mt-1 font-semibold bg-transparent appearance-none outline-none px-1 placeholder:text-[#595959] placeholder:font-normal placeholder:text-sm"
+                                        value="{{ $product->Creator->bank_name }}" placeholder="Nama bank" required />
                                 </div>
                                 <div class="w-6 h-6 flex shrink-0">
                                     <img src="{{ asset('images/icons/bank.svg') }}" alt="icon">
@@ -187,12 +180,12 @@
                             <div
                                 class="flex items-center gap-1 p-[12px_20px] pl-4 w-[215px] justify-between rounded-lg bg-[#181818] hover:ring-[1px] hover:ring-[#A0A0A0] focus:ring-[1px] focus:ring-[#A0A0A0] transition-all duration-300">
                                 <div class="flex flex-col w-full">
-                                    <label for="name" class="text-xs text-belibang-grey pl-1">Account Name</label>
+                                    <label for="name" class="text-xs text-lapakjmb-grey pl-1">Nama Pemilik Rekening</label>
                                     <div class="flex mt-1 items-center max-w-[149px]">
-                                        <input disabled type="text" name="name"
+                                        <input type="text" name="account_name"
                                             value="{{ $product->Creator->bank_account }}" id="name"
                                             class="font-semibold bg-transparent appearance-none autofull-no-bg outline-none px-1 placeholder:text-[#595959] placeholder:font-normal placeholder:text-sm w-full"
-                                            placeholder="Type here" required></input>
+                                            placeholder="Nama pemilik rekening" required></input>
                                     </div>
                                 </div>
                                 <div class="w-6 h-6 flex shrink-0">
@@ -203,12 +196,13 @@
                         <div
                             class="flex items-center gap-1 p-[12px_20px] pl-4 justify-between rounded-lg bg-[#181818] hover:ring-[1px] hover:ring-[#A0A0A0] focus:ring-[1px] focus:ring-[#A0A0A0] transition-all duration-300">
                             <div class="flex flex-col w-full">
-                                <label for="number" class="text-xs text-belibang-grey pl-1">Account Number</label>
-                                <div class="flex mt-1 items-center max-w-[322px]">
-                                    <input type="tel" name="number" disabled id="number"
+                                <label for="number" class="text-xs text-lapakjmb-grey pl-1">Nomor Rekening</label>
+                                <div class="flex mt-1 items-center max-w-[322px] gap-2">
+                                    <input type="tel" name="account_number" id="number"
                                         class="mt-1 font-semibold bg-transparent appearance-none autofull-no-bg outline-none px-1 placeholder:text-[#595959] placeholder:font-normal placeholder:text-sm w-full"
-                                        placeholder="Type here" value="{{ $product->Creator->bank_account_number }}"
+                                        placeholder="Masukkan nomor rekening" value="{{ $product->Creator->bank_account_number }}"
                                         pattern="[0-9 -]" required></input>
+                                    <button type="button" onclick="copyTextFunc('number')" class="text-xs px-2 py-1 rounded bg-[#2A2A2A] hover:bg-[#333]">Salin</button>
                                 </div>
                             </div>
                             <div class="w-6 h-6 flex shrink-0">
@@ -218,16 +212,14 @@
                     </div>
                 </div>
                 <div class="w-full flex flex-col gap-4">
-                    <p class="font-semibold text-xl">Confirm Payment</p>
+                    <p class="font-semibold text-xl">Konfirmasi Pembayaran</p>
                     <div class="flex flex-col gap-3">
-                        <p class="text-xs text-[#2D68F8] p-[10px_22px] rounded-lg bg-[#2D68F805]">Please upload proof
-                            of
-                            payment we will confirm it as soon as possible</p>
+                        <p class="text-xs text-[#2D68F8] p-[10px_22px] rounded-lg bg-[#2D68F805]">Unggah bukti transfer, tim kami akan memverifikasi secepatnya.</p>
                         <div class="flex gap-3">
                             <button type="button"
                                 class="flex gap-2 shrink-0 w-[291px] h-[48px] p-[12px_18px] justify-center items-center border border-dashed border-[#595959] rounded-lg hover:bg-[#2A2A2A] transition-all duration-300"
                                 onclick="document.getElementById('proof').click()">
-                                <p>Choose File</p>
+                                <p>Pilih File</p>
                                 <img src="{{ asset('images/icons/document-upload.svg') }}" alt="icon">
                             </button>
                             <input type="file" name="proof" id="proof" class="hidden" onchange="previewFile()"
@@ -249,8 +241,8 @@
                         </div>
                     </div>
                     <button type="submit"
-                        class="rounded-full text-center bg-[#2D68F8] p-[8px_18px] font-semibold hover:bg-[#083297] active:bg-[#062162] transition-all duration-300">Checkout
-                        Now</button>
+                        class="rounded-full text-center bg-[#2D68F8] p-[8px_18px] font-semibold hover:bg-[#083297] active:bg-[#062162] transition-all duration-300">Bayar
+                        Sekarang</button>
                 </div>
 
             </form>

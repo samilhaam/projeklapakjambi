@@ -6,7 +6,7 @@
 
 
     <header
-        class="w-full pt-[74px] pb-[34px] bg-[url('{{ asset('images/backgrounds/hero-image.png') }}')] bg-cover bg-no-repeat bg-center relative z-0">
+        class="w-full pt-[74px] pb-[34px] bg-[url('{{ asset('images/backgrounds/hero-image-1.png') }}')] bg-cover bg-no-repeat bg-center relative z-0">
         <div class="container max-w-[1130px] mx-auto flex flex-col items-center justify-center gap-[34px] z-10">
             <div class="flex flex-col gap-2 text-center w-fit mt-20 z-10">
                 <h1 class="font-semibold text-[60px] leading-[130%]">Search {{ $keyword }}</h1>
@@ -39,7 +39,7 @@
                 <div class="product-card flex flex-col rounded-[18px] bg-[#181818] overflow-hidden">
                     <a href="{{ route('front.details', $product->slug) }}"
                         class="thumbnail w-full h-[180px] flex shrink-0 overflow-hidden relative">
-                        <img src="{{ Storage::url($product->cover) }}" class="w-full h-full object-cover" alt="thumbnail">
+                        <img src="{{ \App\Helpers\ImageHelper::getProductCoverUrl($product) }}" class="w-full h-full object-cover" alt="thumbnail">
                         <p class="backdrop-blur bg-black/30 rounded-[4px] p-[4px_8px] absolute top-3 right-[14px] z-10">
                             Rp {{ number_format($product->price) }}
                         </p>
@@ -49,16 +49,16 @@
                             <a href="{{ route('front.details', 'template-cv-designer-pro') }}"
                                 class="font-semibold line-clamp-2 hover:line-clamp-none">{{ $product->name }}</a>
                             <p
-                                class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">
+                                class="bg-[#2A2A2A] font-semibold text-xs text-lapakjmb-grey rounded-[4px] p-[4px_6px] w-fit">
                                 {{ $product->Category->name }}</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <div class="w-6 h-6 flex shrink-0 items-center justify-center rounded-full overflow-hidden">
-                                <img src="{{ Storage::url($product->Creator->avatar) }}" class="w-full h-full object-cover"
+                                <img src="{{ \App\Helpers\ImageHelper::getUserAvatarUrl($product->Creator) }}" class="w-full h-full object-cover"
                                     alt="logo">
                             </div>
                             <a href=""
-                                class="font-semibold text-xs text-belibang-grey">{{ $product->Creator->name }}</a>
+                                class="font-semibold text-xs text-lapakjmb-grey">{{ $product->Creator ? $product->Creator->name : 'Unknown' }}</a>
                         </div>
                     </div>
                 </div>
